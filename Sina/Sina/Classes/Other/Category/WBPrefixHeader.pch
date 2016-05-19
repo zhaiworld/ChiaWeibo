@@ -1,0 +1,40 @@
+//
+//  WBPrefixHeader.pch
+//  Sina
+//
+//  Created by Chia on 16/2/29.
+//  Copyright © 2016年 WB. All rights reserved.
+//
+
+
+
+#ifdef __OBJC__
+
+
+#define WBKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define CZLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define CZLog(...)
+
+#endif
+//**          cell          **//
+#define WBStatusCellMargin 10
+#define WBNameFont  [UIFont systemFontOfSize:13]
+#define WBTimeFont  [UIFont systemFontOfSize:12]
+#define WBSourceFont WBTimeFont
+#define WBTextFont  [UIFont systemFontOfSize:15]
+#define WBScreenWidth [UIScreen mainScreen].bounds.size.width
+//*************profile***********************//
+#define WBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+#import "UIImage+WBimage.h"
+#import "UIView+Frame.h"
+
+#endif
