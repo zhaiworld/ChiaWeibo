@@ -1,2 +1,0 @@
-# ChiaWeibo
-practice weibo
